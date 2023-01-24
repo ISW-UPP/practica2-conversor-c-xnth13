@@ -1,0 +1,103 @@
+#include <iostream>
+using namespace std;
+
+
+int main()
+{
+	float usd, eu, yen, monto, km, in, ft, cm, nm, ly, kg, ton, oz, lb, µg, Tg;
+	cout << "que menu desea utilizar 1.divisa,  2.medida,   3. masa:" << endl;
+	int menu = 0;
+	int moneda = 0;
+	int unidad = 0;
+	int masa = 0;
+	cin >> menu;
+	switch (menu)
+	{
+	case 1: cout << "convertir moneda:" << endl;
+		cout << "ingrese el monto en mxn:"<< endl;
+		cin >> monto;
+		cout << "a que moneda desea convertir 1-dolar, 2-euro, 3-yenjp:"<< endl;
+		cin >> moneda;
+		switch (moneda)
+		{
+		case 1: cout << "convertir a dolar:" << endl;
+			usd = (monto * 18.92);
+			cout << "su monto ingresado en dolar es:" << usd << endl;
+			break;
+		case 2: cout << "convertir a euro:" << endl;
+			eu = (monto * 0.049);
+			cout << "su monto ingresado en euros es:" << eu << endl;
+			break;
+		case 3: cout << "conventir a yenjp" << endl;
+			yen = (monto * 6.76);
+			cout << "su monto ingresado en yen es:" << yen << endl;
+			break;
+	
+
+		default: cout << "opcion incorrecta";
+		}
+		break;
+	case 2: cout << "convertir distancia" << endl;
+		cout << "ingrese su distancia en km:" << endl;
+		cin >> km;
+		cout << "¿a que unidad desea convertir? 1-in, 2-ft, 3-cm, 4-nm, 5-ly:" << endl;
+		cin >> unidad;
+		switch (unidad)
+		{
+		case 1: cout << "convertir a pulgadas (in):" << endl;
+			in = (km * 39370.1);
+			cout << "su distancia en pulgadas es de:" << in << endl;
+			break;
+		case 2: cout << "convertir a pies (ft):" << endl;
+			ft = (km * 3280.84);
+			cout << "su distancia en pies es de:" << ft << endl;
+			break;
+		case 3: cout << "convertir a centimetros (cm):" << endl;
+			cm = (km * 100000);
+			cout << "su distancia en centimetros es de:" << cm << endl;
+			break;
+		case 4: cout << "convertit a nanometros (nm):" << endl;
+			nm = (km * 1000000000000);
+			cout << "su distancia en nanometros es de:" << nm << endl;
+			break;
+		case 5: cout << "convertir a años luz (ly):" << endl;
+			ly = (km / 9460800000000);
+			cout << "su distancia en años luz es de:" << ly << endl;
+			break;
+
+		default: cout << "opcion incorrecta";
+		}
+		break;
+	case 3: cout << "convertir masa:" << endl;
+		cout << "ingrese su masa en kg." << endl;
+		cin >> kg;
+		cout << "¿a que unidad de masa desea convertir? 1-Ton, 2-oz, 3-lb, 4-µg, 5-Tg:" << endl;
+		cin >> masa;
+		switch (masa)
+		{
+		case 1: cout << "convertir a toneladas (ton):" << endl;
+			ton = (kg / 0.001);
+			cout << "su masa en toneladas es de:" << ton << endl;
+			break;
+		case 2: cout << "convertir a onzas (oz):" << endl;
+			oz = (kg * 35.274);
+			cout << "su masa en onzas es de:" << oz << endl;
+			break;
+		case 3: cout << "convertir a libras (lb):" << endl;
+			lb = (kg * 2.20462);
+			cout << "su masa en libras es de:" << lb << endl;
+			break;
+		case 4: cout << "convertir a micro gramos (µg):" << endl;
+			µg = (kg * 1000000000);
+			cout << "su masa en microgramos es de:" << µg << endl;
+			break;
+		case 5: cout << "convertir a teragramo (Tg):" << endl;
+			Tg = (kg / 0.0000000001);
+			cout << "su masa en teragramos es de:" << Tg << endl;
+			break;
+
+		default: cout << "opcion incorrecta";
+		}
+		break;
+	}
+}
